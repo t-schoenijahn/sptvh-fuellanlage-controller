@@ -13,7 +13,7 @@ class Pins(object):
     RGB_B = Pin(13, Pin.OUT)
     DISPLAY_SDA = Pin(14) #grau
     DISPLAY_SCL = Pin(15) #lila
-    VALVE = Pin(10, Pin.OUT) # grau
+    VALVE = Pin(10, mode=Pin.OUT, value=1) # grau
 
 messages = {
     State.STARTING : "STARTEN - Initialisierung",
@@ -24,3 +24,5 @@ messages = {
     State.RFID_ALLOWED : "OK - Key akzeptiert",
     State.RFID_REJECTED : "OK - Key verweigert"
     }
+
+VALVE_TIME=100
