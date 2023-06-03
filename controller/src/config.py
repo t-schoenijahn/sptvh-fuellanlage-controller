@@ -1,4 +1,5 @@
 from machine import Pin
+from static.definitions import State
 
 
 class Pins(object):
@@ -13,3 +14,13 @@ class Pins(object):
     DISPLAY_SDA = Pin(14) #grau
     DISPLAY_SCL = Pin(15) #lila
     VALVE = Pin(10, Pin.OUT) # grau
+
+messages = {
+    State.STARTING : "STARTEN - Initialisierung",
+    State.CONNECTION_WIFI : "STARTEN - Netzwerk",
+    State.OK : "sptvh - Füllanlage",
+    State.ERROR : "FEHLER!",
+    State.RFID_READ : "OK - Key validieren",
+    State.RFID_ALLOWED : "OK - Key akzeptiert",
+    State.RFID_REJECTED : "OK - Key verweigert"
+    }
