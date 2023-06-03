@@ -3,11 +3,11 @@ from static.definitions import State
 
 
 class Pins(object):
-    RFID_CS = Pin(5) #lila
-    RFID_SCK = Pin(2) #blau
-    RFID_MOSI = Pin(4) #grün
-    RFID_MISO = Pin(3) #gelb
-    RFID_RST = Pin(6) # orange
+    RFID_CS = 5 #lila
+    RFID_SCK = 2 #blau
+    RFID_MOSI = 3 #grün
+    RFID_MISO = 4 #gelb
+    RFID_RST = 6 # orange
     RGB_R = Pin(11, Pin.OUT)
     RGB_G = Pin(12, Pin.OUT)
     RGB_B = Pin(13, Pin.OUT)
