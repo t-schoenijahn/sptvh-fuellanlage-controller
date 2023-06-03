@@ -10,8 +10,4 @@ class Visualzation:
         self._lcd = Display(Pins.DISPLAY_SDA, Pins.DISPLAY_SCL)
 
     def showData(self, state: int, text1="", text2="", values=""):
-        self._lcd.writeLine(0, messages[state])
-        self._lcd.writeLine(1, text1)
-        self._lcd.writeLine(2, text2)
-        self._lcd.writeLine(3, values)
-
+        self._lcd.writeText([messages[state], text1, text2, values])
