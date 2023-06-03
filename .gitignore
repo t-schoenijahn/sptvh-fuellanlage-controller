@@ -1,5 +1,7 @@
 #manually added
 *.uf2
+.vscode
+.picowgo
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
