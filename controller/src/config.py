@@ -19,7 +19,7 @@ class Pins(object):
 messages = {
     State.STARTING : "STARTEN - Init",
     State.CONNECTION_WIFI : "STARTEN - Netzwerk",
-    State.OK : "sptvh - F\xF5llanlage",
+    State.OK : " sptvh - F\xF5llanlage ",
     State.ERROR : "FEHLER!",
     State.RFID_READ : "OK - Key validieren",
     State.RFID_ALLOWED : "OK - Key akzeptiert",
