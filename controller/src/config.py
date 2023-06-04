@@ -1,5 +1,6 @@
 from machine import Pin
 from static.definitions import State
+from libraries.rgb_led import Color
 
 
 class Pins(object):
@@ -23,6 +24,16 @@ messages = {
     State.RFID_READ : "OK - Key validieren",
     State.RFID_ALLOWED : "OK - Key akzeptiert",
     State.RFID_REJECTED : "OK - Key verweigert"
+    }
+
+colorCodes = {
+    State.STARTING : Color(0, 65534, 65534),
+    State.CONNECTION_WIFI : Color(0, 65534, 65534),
+    State.OK : Color(65534, 65534, 65534),
+    State.ERROR : Color(0, 0, 65534),
+    State.RFID_READ : Color(65534, 65534, 0),
+    State.RFID_ALLOWED : Color(0, 65534, 0),
+    State.RFID_REJECTED : Color(65534, 0, 0)
     }
 
 VALVE_TIME=100
