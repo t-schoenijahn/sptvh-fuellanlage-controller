@@ -27,5 +27,5 @@ while True:
             card = int.from_bytes(bytes(uid), "little", False)
             if card != prevCard:
                 prevCard = card
-                numOfCards+=1
-                vis.showData(2, "CARD ID: " + str(card), str(numOfCards))
+                numOfCards += 1
+                vis.showData(10, values="ID: " + str(card))

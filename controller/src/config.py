@@ -16,9 +16,9 @@ class Pins(object):
     VALVE = Pin(10, mode=Pin.OUT, value=1) # grau
 
 messages = {
-    State.STARTING : "STARTEN - Initialisierung",
+    State.STARTING : "STARTEN - Init",
     State.CONNECTION_WIFI : "STARTEN - Netzwerk",
-    State.OK : "sptvh - Füllanlage",
+    State.OK : "sptvh - F\xF5llanlage",
     State.ERROR : "FEHLER!",
     State.RFID_READ : "OK - Key validieren",
     State.RFID_ALLOWED : "OK - Key akzeptiert",
