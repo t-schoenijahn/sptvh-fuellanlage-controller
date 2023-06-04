@@ -23,9 +23,7 @@ class RfidReader:
             if stat == self._reader.OK:
                 (stat, uid) = self._reader.SelectTagSN()
                 if stat == self._reader.OK:
-                    card = int.from_bytes(
-                        bytes=bytes(uid), byteorder="little", signed=False
-                    )
+                    card = int.from_bytes(bytes(uid), "little", False)
                     return "" + str(card)
             time.sleep_ms(50)
         return ""  # cannot be reached
