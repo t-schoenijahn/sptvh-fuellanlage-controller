@@ -16,6 +16,12 @@ class Pins(object):
     DISPLAY_SCL = Pin(15) #lila
     VALVE = Pin(10, mode=Pin.OUT, value=1) # grau
 
+class Network(object):
+    WIFI_SSID = "ssid"
+    WIFI_PASSWORD = "password"
+    API_URL = "http://127.0.0.1"
+    API_KEY = "12KEY34"
+
 messages = {
     State.STARTING : "STARTEN - Init",
     State.CONNECTION_WIFI : "STARTEN - Netzwerk",
