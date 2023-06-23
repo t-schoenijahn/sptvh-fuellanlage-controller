@@ -1,5 +1,4 @@
 #!/usr/bin/env python
-# encoding: utf-8
 import json
 from flask import Flask, jsonify, request
 app = Flask(__name__)
@@ -16,4 +15,5 @@ def validate():
         authorized = True
     return jsonify({'authorized': authorized})
 
-app.run()
+if __name__ == "__main__":
+    app.run()
