@@ -14,7 +14,7 @@ reader = RfidReader()
 
 visualization.showData(
     State.CONNECTION_WIFI,
-    "WiFi: Connecting",
+    "WiFi:Connecting",
     "API: Pending",
     "Wait at least 5 min"
 )
@@ -24,7 +24,7 @@ wifi = WiFi()
 if not wifi.isConnected():
     visualization.showData(
         State.ERROR,
-        "WiFi: FAILED",
+        "WiFi:FAILED",
         "API: STOPPED",
         "Restart in <10 min",
     )
@@ -33,7 +33,7 @@ if not wifi.isConnected():
 
 visualization.showData(
     State.CONNECTION_WIFI,
-    "WiFI: " + wifi.getIp(),
+    "WiFi:" + wifi.getIp(),
     "API: Connecting",
     "Wait at least 5 min",
 )
@@ -43,7 +43,7 @@ rfid_api = Rfid_Api(wifi)
 if not rfid_api.connect_api():
     visualization.showData(
         State.ERROR,
-        "WiFI: " + wifi.getIp(),
+        "WiFi:" + wifi.getIp(),
         "API: FAILED",
         "Restarting in <10 min",
     )
@@ -53,7 +53,7 @@ if not rfid_api.connect_api():
 # connection functional
 visualization.showData(
     State.STARTING,
-    "WiFI: " + wifi.getIp(),
+    "WiFi:" + wifi.getIp(),
     "API: Connected",
     "Startup done",
     sleep=2
