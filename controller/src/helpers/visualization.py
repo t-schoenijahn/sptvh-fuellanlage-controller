@@ -1,11 +1,11 @@
 from static.definitions import State
 from libraries.display import Display
-from libraries.rgb_led import RgbLed
+from libraries.rgb_led import RgbLed, Color
 from config import Pins, colorCodes, messages
 import time
 
 
-class Visualzation:
+class Visualization:
     _state = State.STARTING
 
     def __init__(self) -> None:
@@ -20,3 +20,4 @@ class Visualzation:
 
     def off(self):
         self._lcd.setLight(False)
+        self._rgb.showColor(color=Color(0, 0, 0))

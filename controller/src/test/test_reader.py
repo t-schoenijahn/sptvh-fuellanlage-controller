@@ -1,5 +1,5 @@
 from libraries.rfid.mfrc522 import MFRC522
-from helpers.visualization import Visualzation
+from helpers.visualization import Visualization
 from config import Pins
 import utime
 
@@ -12,7 +12,7 @@ reader = MFRC522(
     rst=Pins.RFID_RST,
 )
 
-vis = Visualzation()
+vis = Visualization()
 vis.showData(2, "Start")
 
 prevCard = 0

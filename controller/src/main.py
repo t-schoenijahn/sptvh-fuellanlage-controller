@@ -1,5 +1,5 @@
 from helpers.apiconnector import WiFi, Rfid_Api
-from helpers.visualization import Visualzation
+from helpers.visualization import Visualization
 from helpers.reader import RfidReader
 from static.definitions import *
 from helpers.valve import Valve
@@ -8,7 +8,7 @@ import config
 import machine
 
 # --- setup ---
-visualization = Visualzation()
+visualization = Visualization()
 valve = Valve()
 reader = RfidReader()
 
