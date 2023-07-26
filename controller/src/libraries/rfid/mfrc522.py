@@ -1,3 +1,4 @@
+#code from https://github.com/danjperron/micropython-mfrc522
 from machine import Pin, SPI
 from os import uname
 
