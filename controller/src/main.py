@@ -69,11 +69,11 @@ def run():
 
     # validation
     visualization.showData(State.RFID_READ, "Bitte warten...", values= "ID: " + rfid_token, sleep=2)
-    authorized, status, message = rfid_api.check_rfidtoken(rfid_token)
+    authorized, status, message, openTime = rfid_api.check_rfidtoken(rfid_token)
 
     if authorized:
         # api ok, authorized -> LCD and LED to valid & open valve
-        timeCountdown = config.VALVE_TIME
+        timeCountdown = openTime if openTime > 0 else config.VALVE_TIME
         valve.enable()
         while timeCountdown >= 0:
             visualization.showData(

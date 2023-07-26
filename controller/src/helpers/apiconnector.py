@@ -37,7 +37,7 @@ class Rfid_Api:
 
     def check_rfidtoken(self, token) -> tuple:
         body = {"deviceId": 1, "token": token}
-        authorized, status, message = False, 500, "Error"
+        authorized, status, message, time = False, 500, "Error", 0
         try:
             request = requests.get(
                 url=Network.API_URL + "/token/validate",
@@ -54,9 +54,12 @@ class Rfid_Api:
                 authorized = message["authorized"] #TODO: check once API is ready
             except KeyError:
                 authorized = False  
+            if(authorized):
+                time = message["time"]
+
         except:
             authorized = False
             status = 500
             message = "Error"
 
-        return authorized, status, message
+        return authorized, status, message, time
